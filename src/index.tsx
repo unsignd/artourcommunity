@@ -23,6 +23,11 @@ const router = createBrowserRouter([
         <Outlet />
       </Container>
     ),
+    errorElement: (
+      <Container>
+        <Header />
+      </Container>
+    ),
     children: [
       {
         path: '/',
