@@ -59,6 +59,8 @@ const Heading = styled.p<{
   font-weight: 500;
 
   color: ${(props) => props.$color};
+
+  line-height: 1.25;
 `;
 
 const QuoteWrapper = styled.div`
@@ -98,6 +100,23 @@ const QuoteText = styled(Text)`
   white-space: pre-wrap;
 `;
 
+const SectionWrapper = styled.div`
+  margin-top: 160px;
+  padding: 0 80px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  white-space: pre-wrap;
+`;
+
+const SectionText = styled(Text)`
+  max-width: 50%;
+
+  white-space: pre-wrap;
+`;
+
 export function About() {
   const { palette } = usePalette();
   const { theme } = useTheme();
@@ -117,6 +136,25 @@ export function About() {
           through themes of multiculturalism, environmentalism, history, etc.
         </QuoteText>
       </QuoteWrapper>
+      <SectionWrapper>
+        <Heading $color={palette[theme]['base.500']}>Vision & Value.</Heading>
+        <SectionText $color={palette[theme]['base.400']}>
+          Art of Our Community’s vision is to provide a platform for youth to
+          express themselves creatively and in a manner that benefits their
+          community in everlasting ways.{'\n'}Additionally, we also aim for a
+          more artistically involved future generation.{'\n'}
+          {'\n'}Art of Our Community’s mission is to enhance the unique
+          characteristics of communities in Vancouver through the use of art
+          displayed to the public.{'\n'}Through diligence, teamwork, creativity,
+          and awareness, our team aims to elevate communities and make them a
+          more welcoming environment for all.
+        </SectionText>
+      </SectionWrapper>
+      <SectionWrapper>
+        <Heading $color={palette[theme]['base.500']}>
+          Everyday projects{'\n'}that benefit{'\n'}the community.
+        </Heading>
+      </SectionWrapper>
     </Container>
   );
 }
