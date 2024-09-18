@@ -7,9 +7,7 @@ const { readDb, writeDb } = require('./dbUtils.js');
 
 const router = express();
 router.use(bodyParser.json());
-router.use(cors({
-  origin: 'http://localhost:3000', // Replace with your frontend URL if different
-}));
+router.use(cors());
 
 const JWT_SECRET = 'cSY&g<X:HqS:JhC'; // Use a strong secret key in production
 
