@@ -57,7 +57,7 @@ export function Header() {
           options={{
             volunteer_hub: {
               text: 'Volunteer Hub',
-              onClick: () => navigate('/volunteer_hub'),
+              onClick: () => navigate('/login'),
             },
             about_us: {
               text: 'About Us',
