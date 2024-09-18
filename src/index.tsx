@@ -8,6 +8,13 @@ import { Provider } from '@unsignd/uuuui';
 import { Home } from './pages/Home';
 import { Header } from './components/Header';
 import styled from 'styled-components';
+import { About } from './pages/About';
+import { Projects } from './pages/Projects';
+import { News } from './pages/News';
+import { Gallery } from './pages/Gallery';
+import { Login } from './pages/Login';
+import { Register } from './pages/Register';
+import { Profile } from './pages/Profile';
 
 const Container = styled.div`
   display: flex;
@@ -23,10 +30,43 @@ const router = createBrowserRouter([
         <Outlet />
       </Container>
     ),
+    errorElement: (
+      <Container>
+        <Header />
+      </Container>
+    ),
     children: [
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/login',
+        element: <Login />,
+      },
+      {
+        path: '/register',
+        element: <Register />,
+      },
+      {
+        path: '/profile',
+        element: <Profile />,
+      },
+      {
+        path: '/about_us',
+        element: <About />,
+      },
+      {
+        path: '/what_we_do',
+        element: <Projects />,
+      },
+      {
+        path: '/news',
+        element: <News />,
+      },
+      {
+        path: '/gallery',
+        element: <Gallery />,
       },
     ],
   },
