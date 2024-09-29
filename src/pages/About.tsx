@@ -59,8 +59,6 @@ const Heading = styled.p<{
   font-weight: 500;
 
   color: ${(props) => props.$color};
-
-  line-height: 1.25;
 `;
 
 const QuoteWrapper = styled.div`
@@ -100,13 +98,17 @@ const QuoteText = styled(Text)`
   white-space: pre-wrap;
 `;
 
+const SectionGroup = styled.div`
+  margin-bottom: 80px;
+`;
+
 const SectionWrapper = styled.div`
   margin-top: 160px;
   padding: 0 80px;
 
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 
   white-space: pre-wrap;
 `;
@@ -115,6 +117,18 @@ const SectionText = styled(Text)`
   max-width: 50%;
 
   white-space: pre-wrap;
+`;
+
+const ImageWrapper = styled.div`
+  width: 100vw;
+  height: 20vw;
+
+  display: flex;
+`;
+
+const Image = styled.img`
+  width: 20vw;
+  height: 20vw;
 `;
 
 export function About() {
@@ -136,25 +150,54 @@ export function About() {
           through themes of multiculturalism, environmentalism, history, etc.
         </QuoteText>
       </QuoteWrapper>
-      <SectionWrapper>
-        <Heading $color={palette[theme]['base.500']}>Vision & Value.</Heading>
-        <SectionText $color={palette[theme]['base.400']}>
-          Art of Our Community’s vision is to provide a platform for youth to
-          express themselves creatively and in a manner that benefits their
-          community in everlasting ways.{'\n'}Additionally, we also aim for a
-          more artistically involved future generation.{'\n'}
-          {'\n'}Art of Our Community’s mission is to enhance the unique
-          characteristics of communities in Vancouver through the use of art
-          displayed to the public.{'\n'}Through diligence, teamwork, creativity,
-          and awareness, our team aims to elevate communities and make them a
-          more welcoming environment for all.
-        </SectionText>
-      </SectionWrapper>
-      <SectionWrapper>
-        <Heading $color={palette[theme]['base.500']}>
-          Everyday projects{'\n'}that benefit{'\n'}the community.
-        </Heading>
-      </SectionWrapper>
+      <SectionGroup>
+        <SectionWrapper>
+          <Heading $color={palette[theme]['base.500']}>Vision & Value.</Heading>
+          <SectionText $color={palette[theme]['base.400']}>
+            Art of Our Community’s vision is to provide a platform for youth to
+            express themselves creatively and in a manner that benefits their
+            community in everlasting ways.{'\n'}Additionally, we also aim for a
+            more artistically involved future generation.{'\n'}
+            {'\n'}Art of Our Community’s mission is to enhance the unique
+            characteristics of communities in Vancouver through the use of art
+            displayed to the public.{'\n'}Through diligence, teamwork,
+            creativity, and awareness, our team aims to elevate communities and
+            make them a more welcoming environment for all.
+          </SectionText>
+        </SectionWrapper>
+        <SectionWrapper>
+          <Heading $color={palette[theme]['base.500']}>
+            Everyday projects{'\n'}that benefit{'\n'}the community.
+          </Heading>
+        </SectionWrapper>
+      </SectionGroup>
+      <ImageWrapper>
+        <Image
+          src={
+            'https://images.unsplash.com/photo-1605214104310-e8eeaf317e8c?q=80&w=3488&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          }
+        />
+        <Image
+          src={
+            'https://images.unsplash.com/photo-1661868149367-225ee4b277f0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHdhbGwlMjBwYWludGluZ3xlbnwwfHwwfHx8MA%3D%3D'
+          }
+        />
+        <Image
+          src={
+            'https://images.unsplash.com/photo-1517334266-b25264dbe6f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2FsbCUyMHBhaW50aW5nfGVufDB8fDB8fHww'
+          }
+        />
+        <Image
+          src={
+            'https://images.unsplash.com/photo-1645732712972-6a1167c17738?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHdhbGwlMjBwYWludGluZ3xlbnwwfHwwfHx8MA%3D%3D'
+          }
+        />
+        <Image
+          src={
+            'https://images.unsplash.com/photo-1517775040268-83cbbbd76cf0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE0fHx3YWxsJTIwcGFpbnRpbmd8ZW58MHx8MHx8fDA%3D'
+          }
+        />
+      </ImageWrapper>
     </Container>
   );
 }

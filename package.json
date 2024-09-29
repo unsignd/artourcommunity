@@ -29,7 +29,8 @@
     "start": "concurrently \"react-scripts start --ignore client\" \"node src/server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "web": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
