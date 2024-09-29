@@ -55,8 +55,9 @@ const Text = styled.p<{
 const Heading = styled.p<{
   $color: string;
 }>`
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 500;
+  line-height: 1.25;
 
   color: ${(props) => props.$color};
 `;
@@ -98,6 +99,27 @@ const QuoteText = styled(Text)`
   white-space: pre-wrap;
 `;
 
+const SectionGroup = styled.div`
+  margin-bottom: 80px;
+`;
+
+const SectionWrapper = styled.div`
+  margin-top: 160px;
+  padding: 0 80px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  white-space: pre-wrap;
+`;
+
+const SectionText = styled(Text)`
+  max-width: 50%;
+
+  white-space: pre-wrap;
+`;
+
 export function Projects() {
   const { palette } = usePalette();
   const { theme } = useTheme();
@@ -118,6 +140,13 @@ export function Projects() {
           community.
         </QuoteText>
       </QuoteWrapper>
+      <SectionGroup>
+        <SectionWrapper>
+          <Heading $color={palette[theme]['base.500']}>
+            Our Past{'\n'}Projects.
+          </Heading>
+        </SectionWrapper>
+      </SectionGroup>
     </Container>
   );
 }

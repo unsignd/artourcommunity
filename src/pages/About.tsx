@@ -55,8 +55,9 @@ const Text = styled.p<{
 const Heading = styled.p<{
   $color: string;
 }>`
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 500;
+  line-height: 1.25;
 
   color: ${(props) => props.$color};
 `;
