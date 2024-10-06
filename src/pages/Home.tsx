@@ -218,11 +218,6 @@ export function Home() {
   const [scrollY, setScrollY] = useState<number>(0);
 
   const onScroll = () => {
-    console.log(window.scrollY);
-    console.log(
-      960 * 5 + (cardRef.current?.offsetTop ?? 0) - window.innerHeight
-    );
-
     setScrollY(
       (window.scrollY -
         (cardRef.current?.offsetTop ?? 0) +
