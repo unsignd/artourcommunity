@@ -111,7 +111,7 @@ export function Gallery() {
         </Heading>
       </TextWrapper>
       <QuoteWrapper>
-        <QuoteText $color={palette[theme]['primary.200']}>yup</QuoteText>
+        <QuoteText $color={palette[theme]['primary.200']}>TBD</QuoteText>
       </QuoteWrapper>
     </Container>
   );
