@@ -53,6 +53,8 @@ const Date = styled.p<{
 const Heading = styled.p<{
   $color: string;
 }>`
+  margin-bottom: 8px;
+
   font-size: 40px;
   font-weight: 500;
   line-height: 1.25;
@@ -97,7 +99,7 @@ const SectionWrapper = styled.div`
   padding: 0 80px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   white-space: pre-wrap;
 `;
 
@@ -176,7 +178,7 @@ export function Projects() {
             February 28TH, 2023
           </Date>
           <Heading $color={palette[theme]['base.500']}>
-            COMMUNITY PAINTING PROJECT
+            Community Painting Project
           </Heading>
           <SectionText $color={palette[theme]['base.400']}>
             Our Community Painting Project is well underway as some of the
@@ -202,7 +204,7 @@ export function Projects() {
         <SectionWrapper>
           <Date $color={palette[theme]['primary.200']}>October 25TH, 2023</Date>
           <Heading $color={palette[theme]['base.500']}>
-            "Happy People, Happy Life"
+            Happy People, Happy Life
           </Heading>
           <SectionText $color={palette[theme]['base.400']}>
             For the past year, two AOOC members have been working on producing a
